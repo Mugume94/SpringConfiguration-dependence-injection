@@ -1,17 +1,23 @@
 package com.davs.springdemo;
 
 public class SwimCoach implements Coach {
+	
+	private FortuneService fortuneService;
+	
+	
+	public SwimCoach(FortuneService fortuneService) {
+		this.fortuneService = fortuneService;
+	}
 
 	@Override
 	public String getDailyWorkOut() {
-		// TODO Auto-generated method stub
-		return null;
+		
+		return "Swimm 1000 meters as a warm up";
 	}
 
 	@Override
 	public String getDailyFortune() {
-		// TODO Auto-generated method stub
-		return null;
+		return fortuneService.getFortune();
 	}
 
 }

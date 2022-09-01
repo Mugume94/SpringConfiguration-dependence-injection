@@ -3,12 +3,12 @@ package com.davs.springdemo;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
-public class AnnotationDemoApp {
+public class SwimJavaConfigDemoApp {
 
 	public static void main(String[] args) {
 		AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(SportConfig.class);
 		
-		Coach theCoach = context.getBean("tennisCoach", Coach.class);
+		Coach theCoach = context.getBean("swimCoach", Coach.class);
 		
 		System.out.println(theCoach.getDailyWorkOut());
 		
